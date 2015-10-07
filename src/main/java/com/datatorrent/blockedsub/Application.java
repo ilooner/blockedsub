@@ -11,7 +11,7 @@ import com.datatorrent.api.DAG;
 import com.datatorrent.api.DAG.Locality;
 import com.datatorrent.lib.io.ConsoleOutputOperator;
 
-@ApplicationAnnotation(name="MyFirstApplication")
+@ApplicationAnnotation(name="Blocked Sub")
 public class Application implements StreamingApplication
 {
 
