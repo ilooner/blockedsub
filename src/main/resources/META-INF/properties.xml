@@ -16,5 +16,9 @@
     <name>dt.operator.*.attr.TIMEOUT_WINDOW_COUNT</name>
     <value>2000000</value>
   </property>
+  <property>
+    <name>dt.loggers.level</name>
+    <value>com.datatorrent.bufferserver.*:DEBUG,com.datatorrent.netlet.*:DEBUG</value>
+  </property>
 </configuration>
 
