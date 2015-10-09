@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 public class ConsumerOperator extends BaseOperator implements Partitioner<ConsumerOperator>
 {
   private long multiplier;
-
+  private int partitionCount = 8;
   public final transient DefaultInputPort<Double> input = new DefaultInputPort<Double>() {
 
     @Override
@@ -50,7 +50,7 @@ public class ConsumerOperator extends BaseOperator implements Partitioner<Consum
     ConsumerOperator consumer = clctn.iterator().next().getPartitionedInstance();
     Collection<Partition<ConsumerOperator>> newPartitions = Lists.newArrayList();
 
-    for (int partitionCount = 0; partitionCount < 8; partitionCount++) {
+    for (int partitionCount = 0; partitionCount < getPartitionCount(); partitionCount++) {
       ConsumerOperator cloned = clone(kryo, consumer);
       cloned.setMultiplier((long) (partitionCount + 1));
       newPartitions.add(new DefaultPartition(cloned));
@@ -90,5 +90,21 @@ public class ConsumerOperator extends BaseOperator implements Partitioner<Consum
   public void setMultiplier(long multiplier)
   {
     this.multiplier = multiplier;
+  }
+
+  /**
+   * @return the partitionCount
+   */
+  public int getPartitionCount()
+  {
+    return partitionCount;
+  }
+
+  /**
+   * @param partitionCount the partitionCount to set
+   */
+  public void setPartitionCount(int partitionCount)
+  {
+    this.partitionCount = partitionCount;
   }
 }
