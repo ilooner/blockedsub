@@ -25,9 +25,10 @@
     <name>dt.loggers.level</name>
     <value>com.datatorrent.bufferserver.*:DEBUG,com.datatorrent.netlet.*:DEBUG</value>
   </property>
+  <!--
   <property>
     <name>dt.operator.*.attr.JVM_OPTIONS</name>
     <value>-XX:+HeapDumpOnOutOfMemoryError</value>
-  </property>
+  </property>-->
 </configuration>
 
