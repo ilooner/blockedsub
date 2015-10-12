@@ -18,7 +18,7 @@
   </property>
 
   <property>
-    <name>dt.operator.*.attr.HEARTBEAT_TIMEOUT_MILLIS</name>
+    <name>dt.attr.HEARTBEAT_TIMEOUT_MILLIS</name>
     <value>2000000000</value>
   </property>
   <property>
