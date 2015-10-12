@@ -17,19 +17,17 @@
     <value>2000000</value>
   </property>
 
-<!--
   <property>
     <name>dt.attr.HEARTBEAT_TIMEOUT_MILLIS</name>
     <value>2000000000</value>
-  </property>-->
+  </property>
   <property>
     <name>dt.loggers.level</name>
     <value>com.datatorrent.bufferserver.*:DEBUG,com.datatorrent.netlet.*:DEBUG</value>
   </property>
-  <!--
   <property>
     <name>dt.operator.*.attr.JVM_OPTIONS</name>
     <value>-XX:+HeapDumpOnOutOfMemoryError</value>
-  </property>-->
+  </property>
 </configuration>
 
